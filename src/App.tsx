@@ -33,7 +33,7 @@ const mockChapters = [
 function App() {
   return (
     <main className="min-h-screen min-w-screen flex items-center justify-center bg-gray-100 overflow-hidden">
-      <div className="w-full max-w-[960px] mx-auto px-4">
+      <div className="w-full max-w-[660px] mx-auto px-4">
         <h1 className="text-3xl font-bold text-center mb-8">
           Custom HLS Video Player
         </h1>
