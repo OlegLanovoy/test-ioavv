@@ -45,9 +45,13 @@ export const TimeBar: React.FC<TimeBarProps> = ({
       const time = percentage * duration;
 
       setHoveredTime(time);
-      const chapter = chapters.find(
-        (ch) => time >= ch.startTime && time <= ch.endTime
-      );
+      const chapter = chapters.find((ch, i) => {
+        const isLast = i === chapters.length - 1;
+        return isLast
+          ? time >= ch.startTime && time <= ch.endTime
+          : time >= ch.startTime && time < chapters[i + 1].startTime;
+      });
+
       setHoveredChapter(chapter || null);
     },
     [duration, chapters]

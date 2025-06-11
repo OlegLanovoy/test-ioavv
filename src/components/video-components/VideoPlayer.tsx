@@ -94,7 +94,7 @@ export default function VideoPlayer({ src, chapters = [] }: VideoPlayerProps) {
 
   return (
     <div className="relative h-full max-w-[960px] max-h-[541px] mx-auto bg-black rounded-lg overflow-hidden group">
-      <div className="relative aspect-video mx-auto bg-black rounded-lg overflow-hidden group">
+      <div className="relative aspect-video max-w-[960px] mx-auto bg-black rounded-lg overflow-hidden group">
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
